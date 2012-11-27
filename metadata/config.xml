@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module configVersion="1.0">
+	
+	<!-- Base Module Properties -->
+	<id>dataentrydelay</id>
+	<name>Data Entry Delay</name>
+	<version>2.1</version>
+	<package>org.openmrs.module.@MODULE_ID@</package>
+	<author>Benjamin Muhoza</author>
+	<description>
+			Shows statistics of delays between encounter happenings and data entry
+	</description>
+
+	<activator>@MODULE_PACKAGE@.DataEntryActivator</activator>
+	
+	<!-- <updateURL>https://dev.openmrs.org/modules/download/@MODULE_ID@/update.rdf</updateURL> -->
+	<!-- /Base Module Properties -->
+	
+	<require_version>1.4.3</require_version>
+	
+	<!-- Extensions -->	
+	<extension>
+		<point>org.openmrs.admin.maintenance.localHeader</point>
+		<class>@MODULE_PACKAGE@.extension.html.MaintenanceLinksExt</class>
+	</extension>
+	
+	<!-- Internationalization -->
+	<!-- All message codes should start with @MODULE_ID@.* -->
+	<messages>
+		<lang>en</lang>
+		<file>messages.properties</file>
+	</messages>
+	<messages>
+		<lang>fr</lang>
+		<file>messages_fr.properties</file>
+	</messages>
+	<messages>
+		<lang>es</lang>
+		<file>messages_es.properties</file>
+	</messages>
+	<!-- /Internationalization -->
+	
+</module>
+
